@@ -79,7 +79,7 @@ class MockedResponse(urllib.addinfourl):
         constructor signature.
         """
 
-        fp = StringIO(unicode(content))
+        fp = StringIO(unicode(content.decode("utf-8")))
 
         # In urllib, constructor defined as
         # __init__(self, fp, headers, url, code=None)
